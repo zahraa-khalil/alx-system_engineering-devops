@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod ogu+x dir
+find . -type d -exec chmod ogu+x {} \;
