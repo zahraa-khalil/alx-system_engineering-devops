@@ -1,2 +1,2 @@
 #!/bin/bash
-find . \( -type f -empty -o -type d -empty \) -o \( -name ".*" -type f -empty -o -name ".*" -type d -empty \)
+find . \( -type f -empty \) -o \( -type d -empty \)
