@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $((#$DECIMAL0X16))
+printf "%X\n" $DECIMAL
