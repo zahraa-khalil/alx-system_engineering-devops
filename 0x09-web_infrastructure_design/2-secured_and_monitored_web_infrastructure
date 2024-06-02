@@ -1,0 +1,14 @@
+What are firewalls for?
+Firewalls act as security guards for your network. They monitor and control incoming and outgoing network traffic based on predetermined security rules. Essentially, they help prevent unauthorized access to or from private networks and are used to protect your servers and data from harmful traffic, attacks, or unauthorized access.
+Why is the traffic served over HTTPS?
+HTTPS (HyperText Transfer Protocol Secure) is used to secure the connection between the user's browser and the server. It uses SSL/TLS certificates to encrypt the data transferred, making it difficult for hackers to intercept or tamper with the information. Serving traffic over HTTPS ensures that data like login credentials, personal information, and payment details are securely transmitted.
+What monitoring is used for?
+Monitoring tools are used to keep an eye on the health and performance of your web infrastructure. They track various metrics like server load, response times, and error rates to ensure everything is running smoothly. Monitoring helps identify problems early before they affect users, allowing administrators to take proactive measures to address issues.
+How the monitoring tool is collecting data?
+Collecting Data: Monitoring tools typically collect data through agents installed on each server or by tapping into the server's metrics and logs. These agents send real-time data back to a central monitoring system where it's analyzed. The system might check for things like CPU usage, memory consumption, response times, and more.
+Explain what to do if you want to monitor your web server QPS (Queries Per Second)?
+Monitoring Web Server QPS:
+Select a Monitoring Tool: Choose a monitoring tool that can track HTTP requests, such as Prometheus, Grafana, or New Relic.
+Set Up Metrics Collection: Configure the monitoring tool to collect data from your web servers. This often involves setting up an agent or enabling logging on the server to report metrics back to the monitoring system.
+Define QPS Metric: Ensure that the monitoring system is set to measure the number of queries (or requests) per second that each web server is handling.
+View and Analyze Data: Use the monitoring dashboard to view the QPS data. This can help you understand how much traffic each server is handling and whether you need to adjust resources or load balancing.

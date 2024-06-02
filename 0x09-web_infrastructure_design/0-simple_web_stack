@@ -1,0 +1,31 @@
+What is a server?
+A server is like a powerful computer that stores and provides data and services to other computers (clients) over a network.
+Example: When you log into a website, the server processes your login request and retrieves your account information.
+
+What is the role of the domain name?
+The role of a domain name is to provide a human-readable address for a website 
+
+What type of DNS record www is in www.foobar.com
+
+What is the role of the web server
+A web server is like a waiter in a restaurant. When you request a webpage, the web server fetches the content and serves it to you.
+Example: You request a webpage by typing a URL. The web server processes this request and sends back the HTML page to your browser.
+
+What is the role of the application server?
+Process the logic of web application.
+
+What type of DNS record www is in www.foobar.com
+A record (Address record) or a CNAME record (Canonical Name record).
+
+What is the role of the database
+Store and manage data.
+
+
+ou must be able to explain what the issues are with this infrastructure:
+SPOF: 
+- Web Server: If the web server fails, the entire website becomes unavailable. 
+- There is no backup or redundancy shown, meaning the web server is a SPOF.
+- Database (MySQL): If the MySQL database server fails, any part of the application that depends on the database will stop functioning.
+
+Cannot scale if too much incoming traffic: 
+There is No load Balancer and no backup server to distribute traffic.

@@ -1,0 +1,28 @@
+For every additional element, why you are adding it:
+
+Load Balancer: To distribute incoming traffic evenly across multiple servers, ensuring no single server gets overwhelmed and improving the system's availability and reliability.
+Multiple Web Servers: To handle more requests and provide redundancy. If one server fails, others can continue to serve requests.
+Application Servers: To separate the business logic from the web server, enhancing scalability and maintainability.
+Databases (MySQL): To store and manage the data required by the application.
+
+
+What distribution algorithm your load balancer is configured with and how it works:
+
+Round Robin: This algorithm distributes incoming requests sequentially among the available servers. It works by sending each new request to the next server in line, looping back to the first server once the end of the list is reached.
+
+
+Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both:
+
+Active-Active Setup: In this setup, all servers are actively handling requests simultaneously. This maximizes resource utilization and ensures high availability.
+Active-Passive Setup: In this setup, one or more servers are on standby (passive) and only take over if the active server fails. This provides failover capabilities but may underutilize resources compared to Active-Active.
+
+
+How a database Primary-Replica (Master-Slave) cluster works:
+
+In a Primary-Replica (Master-Slave) cluster, the primary (master) database handles all write operations, and changes are replicated to one or more replica (slave) databases, which handle read operations. This setup improves read scalability and provides data redundancy.
+
+
+What is the difference between the Primary node and the Replica node in regard to the application:
+
+Primary Node (Master): Handles all write operations (insert, update, delete) and is the source of truth for the data. The application directs all write operations to the primary node.
+Replica Node (Slave): Handles read operations and receives data updates from the primary node. The application can direct read operations to the replica nodes to distribute the load and improve performance.
