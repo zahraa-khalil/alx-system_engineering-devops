@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 # Write a Bash script that uses ssh to connect to your server
-# using the private key ~/.ssh/school with the user ubuntu.
 
-# Define variables for server hostname or IP address
 server="18.206.206.240"
 user="ubuntu"
 private_key="~/.ssh/school"
 
-# Use ssh with single-character flags
 ssh -i "$private_key" "$user"@"$server"
