@@ -3,6 +3,6 @@
 
 server="18.206.206.240"
 user="ubuntu"
-private_key="~/.ssh/school"
+private_key="$HOME/.ssh/school"
 
 ssh -i "$private_key" "$user"@"$server"
