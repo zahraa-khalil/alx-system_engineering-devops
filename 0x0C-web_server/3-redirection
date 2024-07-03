@@ -3,14 +3,14 @@
 
 apt-get update
 apt-get install -y nginx
-echo "Holberton School" > /etc/nginx/html/index.html
+echo 'Hello World!' | sudo tee /var/www/html/index.nginx-debian.html
 echo "server {
     listen 80;
     listen [::]:80 default_server;
     root   /etc/nginx/html;
     index  index.html;
     location /redirect_me {
-        return 301 https://twitter.com/Emmanue17280546;
+        return 301 https://www.youtube.com/watch?v=NEy6Oj8dmCc&ab_channel=NewMediaAcademyLife;
     }
 }" > /etc/nginx/sites-available/default
 service nginx restart
