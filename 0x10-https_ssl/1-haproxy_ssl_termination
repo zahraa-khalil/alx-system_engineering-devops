@@ -1,6 +1,5 @@
-#!/usr/bin/env bash
 
-global
+ global
         log /dev/log    local0
         log /dev/log    local1 notice
         chroot /var/lib/haproxy
@@ -35,19 +34,19 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend clickviral-frontend
+frontend mekanocode-frontend
         bind *:80
         mode http
         http-request redirect scheme https code 301 unless { ssl_fc }
         http-request set-header X_Forwarded-Proto http
-        default_backend clickviral-backend
+        default_backend mekanocode-backend
 
-frontend clickviral-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/clickviral.tech.pem
+frontend mekanocode-frontend-https
+        bind *:443 ssl crt /etc/haproxy/certs/www.mekanocode.tech.pem
         http-request set-header X-Forwarded-Proto https
-        default_backend clickviral-backend
+        default_backend mekanocode-backend
 
-backend clickviral-backend
+backend mekanocode-backend
         balance roundrobin
-        server 151666-web-01 100.25.190.21:80 check
-        server 151666-web-02 54.160.77.90:80 check
+        server 464559-web-01 54.197.75.232:80 check
+        server 464559-web-02 18.214.89.9:80 check
