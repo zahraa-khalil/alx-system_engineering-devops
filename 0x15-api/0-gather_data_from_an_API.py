@@ -37,6 +37,6 @@ if __name__ == "__main__":
                       user_response.status_code)
         else:
             print('Failed to retrieve todo list data:',
-            todos_response.status_code)
+                  todos_response.status_code)
     else:
         print('No user ID provided')
