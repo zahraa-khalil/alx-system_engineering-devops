@@ -28,7 +28,7 @@ if __name__ == "__main__":
             if user_response.status_code == 200:
                 user_data = user_response.json()
                 employee_info = (f"Employee {user_data['name']} is done with "
-                                 f"tasks ({done_tasks}/{total_tasks}):")
+                                 f"tasks({done_tasks}/{total_tasks}):")
                 print(employee_info)
                 for title in completed:
                     print(f"\t  {title}")
