@@ -1,4 +1,5 @@
 #!/usr/bin/python3s
+"""Query the Reddit API"""
 
 import requests
 
